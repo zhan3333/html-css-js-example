@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <div id="div1" class="divClass" style="color: aqua;">div1</div>
+        <button type="button" onclick="changeDiv()">修改div</button>
+        <hr/>
+        <div style="height:100px; width: 100px; background-color: brown;" onclick="clickDiv(this)">点我</div>
+    </body>
+    <script>
+        // 查找元素
+        // 根据id查找
+        var div1 = document.getElementById('div1')
+        // 根据class查找
+        var div2 =document.getElementsByClassName('divClass')
+        // 根据标签名查找
+        var div3 =document.getElementsByTagName('div')
+        console.log(div1, div2, div3)
+        
+        function changeDiv (div) {
+             // 改变div html
+            var div = document.getElementById('div1')
+            div.innerHTML = '修改了内容'
+            div.style.color = 'red'
+        }
+        function clickDiv(id) {
+            console.log(id.innerText)
+            switch(id.innerText) {
+                case '点我':
+                    id.innerText = '真点了?'
+                    break
+                case '真点了?':
+                    id.innerText = '还点啊?'
+                    break
+                default :
+                    id.innerText = '点不动啦'
+            }
+        }
+    </script>
+</html>

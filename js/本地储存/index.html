@@ -1,0 +1,31 @@
+<html>
+    <body>
+
+    </body>
+    <script>
+        // localStorage
+        var localStorage = window.localStorage
+        if (!localStorage) {
+            console.log('浏览器不支持本地储存')
+        }
+        console.group('localStorage')
+        console.log('get old val', localStorage.getItem('old'))
+        console.log('setItem')
+        localStorage.setItem('test', 'val')
+        console.log('getItem: ', localStorage.getItem('test'))
+        console.log('removeItem')
+        localStorage.removeItem('test')
+        console.log('getItem: ', localStorage.getItem('test'))        
+        console.log('set old item')
+        localStorage.setItem('old', 'old val')
+        console.groupEnd()
+
+        // sessionStorage
+        console.group('sessionStorage')        // 新打开网页这个值会为空
+        var sessionStorage =window.sessionStorage
+        console.log('sessionStorage test = ', sessionStorage.test)
+        sessionStorage.test = 1
+        console.log('sessionStorage test = ', sessionStorage.test)
+        console.groupEnd()
+    </script>
+</html>

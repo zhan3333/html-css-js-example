@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div id="div1">原始内容</div>
+        <button type="button" onclick="click1()">弹框</button>
+        <button type="button" onclick="changeDiv1Text()">修改div1的text</button>
+        <button type="button" onclick="changeDiv1Html()">修改div1的html</button>
+    </body>
+    <script>
+        function click1 () {
+            alert('弹了个窗')
+        }
+        function changeDiv1Text () {
+            document.getElementById('div1').innerText = '新的内容'
+        }
+        function changeDiv1Html () {
+            document.getElementById('div1').innerHTML = '<p>加个p标签的新内容</p>'
+        }
+    </script>
+</html>

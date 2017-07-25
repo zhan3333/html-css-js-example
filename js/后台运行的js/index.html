@@ -1,0 +1,11 @@
+<html>
+    <body>
+
+    </body>
+    <script>
+        var w = new Worker('work.js')
+        w.onmessage =function (i) {
+            console.log(i.data)
+        }
+    </script>
+</html>

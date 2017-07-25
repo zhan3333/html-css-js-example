@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <!--设置页面标题-->
+        <title>页面标题</title>
+        <!--设置页面描述-->
+        <meta name="keywords" content="HTML, CSS, XML" />
+        <style>
+            #div1 {
+                color: coral
+            }
+            .div2 {
+                color: darkorchid
+            }
+            div {
+                font-size: 32px
+            }
+        </style>
+        <link href="./index.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div><a name="first"></a></div>
+        <p title="zhan">第一个段落</p>
+        <hr/>
+        <p>第二个段落</p>
+        <!-- 这是注释掉的内容: 使用换行符 -->
+        <br/>
+        <!-- 行内通过style设置样式 -->
+        <h1 style="color: blueviolet">一个变色了的标题</h1>
+        <h2 style="text-align: center">中间对齐的标题</h2>
+        <!-- 通过css中id选择器设置样式 -->
+        <div id="div1">通过格式化的css使用样式: 通过id标签</div>
+        <!-- 通过css中类选择器设置样式 -->
+        <div class="div2">通过class设置样式</div>
+        <!-- 使用css中标签选择样式 -->
+        <div>通过标签设置的样式</div>
+        <!-- 使用外联样式 -->
+        <div id="myDiv">外部样式表</div>
+        <hr/>
+
+        <div style="margin-top: 1000px">
+            <p style="text-align: center">链接</p>
+        </div>
+        <!-- 超链接 -->
+        <a href="http://www.baidu.com">百度</a>
+        <!-- 新页面打开 -->
+        <a href="http://www.baidu.com" target="_blank" name="新百度">新页面打开百度</a>
+        <!-- 使用锚跳转到顶部 -->
+        <a href="#first">回到顶部</a>
+
+        <!--图片-->
+        <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" draggable="true">
+        <!--控制图片大小-->
+        <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" style="width: 100px; height: 60px">
+        <!-- 预定义文本描述，在图片加载不出来时显示-->
+        <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/111.png" alt="显示不出来拉">
+        <!--图片链接-->
+        <a href="http://www.baidu.com" title="跳转到百度"><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" style="width: 100px; height: 60px"></a>
+
+        <!--表格-->
+        <table border="1">
+            <tr>
+                <th>标题1</th>
+                <th>标题2</th>
+                <th>标题3</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <!--列表-->
+        <!--有序列表-->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <!--无序列表-->
+        <ol>
+            <li>内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ol>
+
+        <!--块元素-->
+        <div>块1</div>
+        <div>块2</div>
+
+        <hr/>
+        <!--嵌入网页-->
+        <iframe src="http://www.baidu.com" style="width:100%; height:500px"></iframe>
+
+        <hr/>
+        <!--画布-->
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script type="text/javascript">
+        var c=document.getElementById("myCanvas");
+        var cxt=c.getContext("2d");
+        cxt.fillStyle="#FF0000";
+        cxt.fillRect(0,0,150,75);
+        </script>
+
+        <hr/>
+        <!--音频-->
+        <embed height="100" width="100" src="./任素汐 - 我要你.mp3" autostart=false/>
+        <hr/>
+        <!--音频-->
+        <object height="100" width="100" data="./任素汐 - 我要你.mp3" autostart=false></object>
+
+        <hr/>
+        <!--表单-->
+        <form action="http://www.baidu.com" method="get">
+            账号<input type="text" name="username"><br/>
+            密码<input type="password" name="password"><br/>
+            邮箱<input type="email" name="email"><br/>
+            生日<input type="date" name="borthday"><br/>
+            头像<input type="file" name="headimg"><br/>
+            <button type="submit">提交</button>
+        </form>
+
+</html>

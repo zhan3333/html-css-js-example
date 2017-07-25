@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <p>按钮触发事件</p>
+        <button type="button" onclick="click1()">事件调用方法</button>
+        <hr/>
+        <p>加法计算</p>
+        <div>
+            <input type="text" id="num1"><br/> 
+            + <br/>
+            <input type="text" id="num2"> <br/>
+            = 
+            <div id="res"></div>
+            <button type="button" onclick="computed()">计算</button>
+        </div>
+    </body>
+    <script>
+        // 事件调用的函数
+        function click1 () {
+            alert('点击了按钮')
+        }
+        // 自调用的函数
+        function fun1 () {
+            console.log('use fun1')
+        }
+        // 方法中调用方法
+        function fun2 () {
+            console.log('use fun2')
+            fun1()
+        }
+    
+        fun1()
+        console.log('----')
+        fun2()
+
+        // 计算两个数字之和
+        function computed () {
+            var a = parseInt(document.getElementById('num1').value)
+            var b = parseInt(document.getElementById('num2').value)
+            console.log(a, b)
+            document.getElementById('res').innerText = a + b
+        }
+        
+    </script>
+</html>
