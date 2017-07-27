@@ -4,6 +4,14 @@
         <button type="button" onclick="click1()">弹框</button>
         <button type="button" onclick="changeDiv1Text()">修改div1的text</button>
         <button type="button" onclick="changeDiv1Html()">修改div1的html</button>
+        输入框: <input type="text" id="input1" 
+                    onkeyup="inputKeyup(this)" 
+                    onblur="inputBlur()"
+                    onclick="inputClick()"
+                    ondblclick="inputDbClick()"
+                    onkeypress="inputKeypress()"
+                    > <br/>
+        反馈框：<p id="p1"></p>
     </body>
     <script>
         function click1 () {
@@ -14,6 +22,22 @@
         }
         function changeDiv1Html () {
             document.getElementById('div1').innerHTML = '<p>加个p标签的新内容</p>'
+        }
+        function inputKeyup(id) {
+            console.log('onkeyup')
+            document.getElementById('p1').innerText = id.value
+        }
+        function inputBlur() {
+            console.log('onblur 输入框失去了焦点')
+        }
+        function inputClick() {
+            console.log('onclick 单击输入框')            
+        }
+        function inputDbClick () {
+            console.log('ondbclick 双击了输入框')
+        }
+        function inputKeypress () {
+            console.log('onkeypress')
         }
     </script>
 </html>
