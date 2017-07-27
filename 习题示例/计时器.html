@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计时器</title>
+</head>
+<body>
+<h1 id="p1"></h1>
+</body>
+<script>
+    var p = document.getElementById('p1')
+    var i = 0
+    function count() {
+      i ++
+      p.innerText = i/1000
+      console.log()
+      setTimeout('count()', 1)
+    }
+    count()
+</script>
+</html>

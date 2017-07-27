@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本地储存</title>
+</head>
+<body>
+<p id="p1"></p>
+</body>
+<script>
+    // 页面关掉还有效
+    var localStorage = window.localStorage
+//    localStorage.setItem('test', 'value')   // 储存一个键值对
+    console.log(localStorage.getItem('test'))
+    var t = localStorage.getItem('test')
+    document.getElementById('p1').innerText = t
+
+    // 页面关掉无效
+    var sessionStorage = window.sessionStorage
+    console.log(sessionStorage.getItem('test2'))
+//    sessionStorage.setItem('test2', 'value2')        // 设置一个session值
+    console.log(sessionStorage.getItem('test2'))
+
+</script>
+</html>

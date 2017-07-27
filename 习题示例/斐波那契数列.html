@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>斐波那契数列</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 计算斐波那契数列 一个数等于前两个数之和
+    var arr = [1, 1, 2]
+    var i = 25                  // 数列上都
+    for(var j = 0; j < i; j ++) {
+      if (j >= 3) {
+        arr[j] = arr[j-1] + arr[j-2]
+      }
+    }
+    console.log(arr)
+
+    // 输入n，输出这个位置的斐波那契数
+    function fun(n) {
+      if (n <= 2) return 1
+      return fun (n - 1) + fun (n -2)
+    }
+    console.log(fun(25))
+</script>
+</html>

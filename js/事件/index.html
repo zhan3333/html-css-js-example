@@ -1,43 +1,28 @@
 <html>
     <body>
-        <div id="div1">原始内容</div>
-        <button type="button" onclick="click1()">弹框</button>
-        <button type="button" onclick="changeDiv1Text()">修改div1的text</button>
-        <button type="button" onclick="changeDiv1Html()">修改div1的html</button>
-        输入框: <input type="text" id="input1" 
-                    onkeyup="inputKeyup(this)" 
-                    onblur="inputBlur()"
-                    onclick="inputClick()"
-                    ondblclick="inputDbClick()"
-                    onkeypress="inputKeypress()"
-                    > <br/>
-        反馈框：<p id="p1"></p>
+
+        <input type="text" id="input1" onkeypress="fun1(this)">
+        <p id="p1" style="color: blue;">待改变的值</p>
+        <input type="button" value="改变" onclick="fun2()" ondblclick="fun3()">
+        <p class="myclass">123</p>
     </body>
+
     <script>
-        function click1 () {
-            alert('弹了个窗')
+        var dom = document.getElementById('input1')             // id
+        var doms = document.getElementsByTagName('input')       // tag
+        var doms = document.getElementsByClassName('myclass')   // class
+        console.log(doms)
+        function fun1(dom) {
+            console.log('onkeypress', dom, dom.value)
+            document.getElementById('p1').innerText = dom.value     // 用来改变节点的值
         }
-        function changeDiv1Text () {
-            document.getElementById('div1').innerText = '新的内容'
+        function fun2() {
+          var dom = document.getElementById('p1')
+          console.log(dom.style)
+          dom.style.color = 'red'
         }
-        function changeDiv1Html () {
-            document.getElementById('div1').innerHTML = '<p>加个p标签的新内容</p>'
-        }
-        function inputKeyup(id) {
-            console.log('onkeyup')
-            document.getElementById('p1').innerText = id.value
-        }
-        function inputBlur() {
-            console.log('onblur 输入框失去了焦点')
-        }
-        function inputClick() {
-            console.log('onclick 单击输入框')            
-        }
-        function inputDbClick () {
-            console.log('ondbclick 双击了输入框')
-        }
-        function inputKeypress () {
-            console.log('onkeypress')
+        function fun3(){
+          console.log('dbclick')
         }
     </script>
 </html>
