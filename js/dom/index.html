@@ -13,7 +13,6 @@
         var div2 =document.getElementsByClassName('divClass')
         // 根据标签名查找
         var div3 =document.getElementsByTagName('div')
-        console.log(div1, div2, div3)
         
         function changeDiv (div) {
              // 改变div html
@@ -34,5 +33,9 @@
                     id.innerText = '点不动啦'
             }
         }
+        var divs = document.getElementsByTagName('div')
+        var div1 = divs[0]
+        var div2 = divs[1]
+        console.log(divs,div1, div2)
     </script>
 </html>
